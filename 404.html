@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width , initial-scale:1.0">
+        <link rel="stylesheet" href="css.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="cursor-dot" data-cursor-dot></div>
+        <div class="contentwrap4">
+        <div class="bubbles hidden3">
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:24;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:23;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+            <span style="--i:22;"></span>
+            <span style="--i:25;"></span>
+            <span style="--i:18;"></span> 
+            <span style="--i:21;"></span>
+            <span style="--i:15;"class="dissappear5"></span>
+            <span style="--i:13;"class="dissappear5"></span>
+            <span style="--i:26;"class="dissappear5"></span>
+            <span style="--i:17;"class="dissappear5"></span>
+            <span style="--i:13;"class="dissappear5"></span>
+            <span style="--i:28;"class="dissappear5"></span>
+            <span style="--i:11;"class="dissappear4"></span>
+            <span style="--i:12;"class="dissappear4"></span>
+            <span style="--i:24;"class="dissappear4"></span>
+            <span style="--i:10;"class="dissappear4"></span>
+            <span style="--i:14;"class="dissappear4"></span>
+            <span style="--i:23;"class="dissappear4"></span>
+            <span style="--i:18;" class="dissappear4"></span>
+            <span style="--i:16;" class="dissappear3"></span>
+            <span style="--i:19;" class="dissappear3"></span>
+            <span style="--i:20;" class="dissappear3"></span>
+            <span style="--i:22;" class="dissappear3"></span>
+            <span style="--i:25;" class="dissappear3"></span>
+            <span style="--i:18;" class="dissappear3"></span>
+            <span style="--i:21;" class="dissappear3"></span>
+            <span style="--i:15;" class="dissappear3"></span>
+            <span style="--i:13;"  class="dissappear3"></span>
+            <span style="--i:26;"  class="dissappear3"></span>
+            <span style="--i:17;" class="dissappear3"></span>
+            <span style="--i:13;" class="dissappear2"></span>
+            <span style="--i:28;" class="dissappear2"></span>
+            <span style="--i:11;" class="dissappear2"></span>
+            <span style="--i:12;" class="dissappear2"></span>
+            <span style="--i:24;" class="dissappear2"></span>
+            <span style="--i:10;" class="dissappear2"></span>
+            <span style="--i:14;" class="dissappear2"></span>
+            <span style="--i:23;" class="dissappear2"></span>
+            <span style="--i:18;" class="dissappear2"></span>
+            <span style="--i:16;" class="dissappear2"></span>
+            <span style="--i:19;" class="dissappear" ></span>
+            <span style="--i:20;" class="dissappear" ></span>
+            <span style="--i:22;" class="dissappear" ></span>
+            <span style="--i:25;" class="dissappear" ></span>
+            <span style="--i:18;" class="dissappear" ></span>
+            <span style="--i:21;" class="dissappear" ></span>
+            <span style="--i:15;" class="dissappear"></span>
+            <span style="--i:13;" class="dissappear"></span>
+            <span style="--i:26;" class="dissappear"></span>
+            <span style="--i:17;" class="dissappear"></span>
+            <span style="--i:13;" class="dissappear"></span>
+            <span style="--i:28;" class="dissappear"></span>
+        </div>
+        </div>
+        <div class="message hidden">
+            <div class="text14">
+                404
+            </div>
+            <div class="underline4"></div>
+            <div class="text24">OOOPS! The page you are looking for can not be found:( 
+                <p>Return to <a href="home.html">HOMEPAGE?</a></p>
+                </div>
+        </div>
+    </body>
+    <script>
+        const observer = new IntersectionObserver ((entries) => {
+          entries.forEach((entry) => {
+            console.log(entry)
+            if (entry.isIntersecting) {
+              entry.target.classList.add('show');
+            } else{
+              entry.target.classList.remove('show');
+            }
+          });
+        });
+        const hiddenElements = document.querySelectorAll('.hidden');
+        hiddenElements.forEach((el) => observer.observe(el));
+       
+        const hiddenElements2 = document.querySelectorAll('.hidden2');
+        hiddenElements2.forEach((el) => observer.observe(el));
+       
+        const hiddenElements3 = document.querySelectorAll('.hidden3');
+        hiddenElements3.forEach((el) => observer.observe(el));
+        
+        const hiddenElements4 = document.querySelectorAll('.hidden4');
+        hiddenElements4.forEach((el) => observer.observe(el));
+      
+        const hiddenElements5 = document.querySelectorAll('.hidden5');
+        hiddenElements5.forEach((el) => observer.observe(el));
+      </script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const cursorDot = document.querySelector("[data-cursor-dot]");
+          const cursorOutline = document.querySelector("[data-cursor-outline]");
+        
+          window.addEventListener("mousemove", function (e) {
+            const posX = e.clientX;
+            const posY = e.clientY;
+        
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+            cursorDot.style.transition = "left 100ms, top 100ms";
+          });
+        });
+        
+      </script>
+    </html>
