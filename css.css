@@ -1,6 +1,7 @@
 *{
     text-decoration:none;
     list-style: none;
+	max-width:100%;
 }
 body{
    background: linear-gradient(90deg, black, #222222, black);
