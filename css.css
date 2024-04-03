@@ -2302,6 +2302,9 @@ i{
        }
     }
       @media screen and (max-width:540px) {
+	      html{
+	overflow-x:hidden;
+	      }
        .bloomp , .bloomp2{
            height:180px;
            width:180px;
